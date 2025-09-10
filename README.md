@@ -48,7 +48,7 @@ A simple Flask web application that displays "Hello, World!" in your browser.
 
 2. Open your web browser and visit:
    ```
-   http://localhost:6000
+   http://localhost:6001
    ```
 
 3. You should see "Hello, World!" displayed in your browser.
@@ -56,7 +56,7 @@ A simple Flask web application that displays "Hello, World!" in your browser.
 ## Development
 
 - The application runs in debug mode by default, which means it will automatically reload when you make changes to the code.
-- The server runs on port 6000 by default. You can change this in `app.py` if needed.
+- The server runs on port 6001 by default. You can change this in `app.py` if needed.
 - Always activate your virtual environment before working on the project:
   ```bash
   # From the project root directory
@@ -69,6 +69,55 @@ A simple Flask web application that displays "Hello, World!" in your browser.
   # Update requirements.txt after adding new packages
   pip freeze > requirements.txt
   ```
+
+## Testing
+
+### Running Tests
+
+The project includes both unit and integration tests. To run them:
+
+1. Install test dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run all tests:
+   ```bash
+   python -m pytest tests/ -v
+   ```
+
+3. Run only unit tests:
+   ```bash
+   python -m pytest tests/unit/ -v
+   ```
+
+4. Run only integration tests:
+   ```bash
+   python -m pytest tests/integration/ -v
+   ```
+
+5. Run a specific test file:
+   ```bash
+   python -m pytest tests/unit/test_app.py -v
+   ```
+
+6. Run tests with coverage report:
+   ```bash
+   python -m pytest --cov=app tests/
+   ```
+
+### Adding New Dependencies
+
+To add new dependencies:
+1. Activate your virtual environment
+2. Install the package:
+   ```bash
+   pip install package_name
+   ```
+3. Update requirements.txt:
+   ```bash
+   pip freeze > requirements.txt
+   ```
 
 ## Virtual Environment Management
 
