@@ -1,0 +1,6 @@
+# Default owners for the entire repository
+* @drapello
+
+# Specific ownership for app and tests directories
+/app/**        @drapello
+/tests/**      @drapello

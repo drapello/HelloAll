@@ -41,7 +41,7 @@ pipeline {
     }
 
     stage('Unit Tests') {
-      steps {
+      steps { 
         sh ". ${VENV}/bin/activate && pytest -m unit -q --cov=."
       }
     }
